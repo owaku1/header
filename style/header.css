@@ -1,0 +1,48 @@
+header{
+    height: 100px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    .wrapper{
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+        height: 100%;
+        width: 100%;
+        max-width: 1800px;
+        margin: auto;
+        padding: 0 36px;
+
+        .wrapper-logo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            img{
+                max-height: 90%;
+                width: auto;
+            }
+        }
+
+        nav{
+            display: flex;
+            justify-content: flex-end;
+            gap: 36px;
+            align-items: center;
+
+            a{
+                text-decoration: none;
+                color: inherit;
+                font-weight: 500;
+                font-size: 21px;
+                font-family: Arial, Helvetica, sans-serif;
+                transition: ease .5s all;
+            }
+
+            a:hover{
+                color: red;
+                text-decoration: underline;
+            }
+        }
+    }
+}
