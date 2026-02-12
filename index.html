@@ -1,38 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Opakování header k maturitě</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Večerka Střední škola</title>
 
-    <link rel="stylesheet" href="style/header.css">
-    <link rel="stylesheet" href="style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
-    <script src="/script/script.js" defer></script>
+  <link rel="stylesheet" href="style/header.css">
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-    <header>
-        <div class="wrapper">
-            <a href="/" class="wrapper-logo">
-                <img src="/imgs/logo.webp" alt="Logo">
-            </a>
-            <button class="hamburger">
-                <span class="stick"></span>
-                <span class="stick"></span>
-                <span class="stick"></span>
-            </button>
-            <nav>
-                <a href="#">Úvod</a>
-                <a href="#">Kontakt</a>
-                <a href="#">Ceník</a>
-            </nav>
-        </div>
-    </header>
-    <main>
 
-    </main>
-    <footer>
+<div class="scrollbar"><div class="scrollbar__bar" id="scrollbarBar"></div></div>
 
-    </footer>
+<header class="site-header">
+  <div class="wrapper">
+
+    <a class="wrapper-logo" href="#domu" aria-label="Domů">
+      <img src="imgs/logo.png" alt="Logo školy">
+      <div class="brandtext">
+        <div class="brandtitle">Večerka Střední škola</div>
+        <div class="brandsub">Praxe • služby • podnikání • budoucnost</div>
+      </div>
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span class="stick"></span>
+      <span class="stick"></span>
+      <span class="stick"></span>
+    </button>
+
+    <nav id="nav" aria-label="Hlavní menu">
+      <a href="#domu">Domů</a>
+      <a href="#obory">Obory</a>
+      <a href="#aktuality">Aktuality</a>
+      <a href="#jidelna">Školní jídelna</a>
+      <a href="#domov">Domovy mládeže</a>
+      <a href="#verejnost">Pro veřejnost</a>
+      <a class="baka-btn" href="https://www.bakalari.cz" target="_blank" rel="noopener">Bakaláři</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="page" id="domu">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="imgs/hero.jpg" alt="">
+    <div class="hero-dim"></div>
+    <div class="fx-spot" id="fxSpot" aria-hidden="true"></div>
+    <div class="motif" aria-hidden="true"></div>
+
+    <div class="hero-inner reveal">
+      <div class="badge"><span class="dot"></span> Přijímací řízení 2026 otevřeno</div>
+
+      <h1>Střední škola<br>Večerka</h1>
+
+      <p>
+        Moderní vzdělání postavené na praxi. Učíme dovednosti z reálného života:
+        služby, obchod, gastro, podnikání — a k tomu digitální základ.
+      </p>
+
+      <div class="cta">
+        <a class="btn primary" href="#obory">Naše obory</a>
+        <a class="btn ghost" href="#kontakt">Kontaktujte nás</a>
+      </div>
+
+      <div class="stats">
+        <div><b>300+</b><small>Studentů</small></div>
+        <div><b>5</b><small>Maturitních oborů</small></div>
+        <div><b>4</b><small>Učebních oborů</small></div>
+      </div>
+
+      <button class="scroll" id="scrollBtn" type="button">Scroll ↓</button>
+    </div>
+  </section>
+
+  <!-- OBORY -->
+  <section class="section reveal" id="obory">
+    <h2>Obory</h2>
+    <p class="txt">Typické směry z praxe — zaměřené na provoz, služby a podnikání.</p>
+
+    <div class="grid">
+      <article class="card"><h3>Večerka / Prodejna</h3><p>Prodej, sklad, objednávky, zákazníci, rychlost.</p><div class="tag">provoz</div></article>
+      <article class="card"><h3>Nehty (Nail studio)</h3><p>Manikúra, gel, design, hygiena, práce s klientem.</p><div class="tag">služby</div></article>
+      <article class="card"><h3>Kadeřník</h3><p>Střih, barvení, péče, styling, servis.</p><div class="tag">služby</div></article>
+      <article class="card"><h3>Tržnice / Stánek</h3><p>Prodej, komunikace, prezentace, vyjednávání.</p><div class="tag">obchod</div></article>
+      <article class="card"><h3>Kuchař / Bistro</h3><p>Gastro praxe, provoz, standardy, hygiena.</p><div class="tag">gastro</div></article>
+      <article class="card"><h3>Import & Distribuce</h3><p>Dodavatelé, logistika, sklad, evidence.</p><div class="tag">logistika</div></article>
+      <article class="card"><h3>Marketing pro podnikání</h3><p>Brand, nabídky, sociální sítě, promo.</p><div class="tag">digital</div></article>
+      <article class="card"><h3>Pokladna & Finance</h3><p>Pokladní systémy, marže, přehledy, odpovědnost.</p><div class="tag">finance</div></article>
+    </div>
+  </section>
+
+  <!-- AKTUALITY -->
+  <section class="section alt reveal" id="aktuality">
+    <h2>Aktuality</h2>
+    <p class="txt">Důležité informace, termíny a školní akce.</p>
+
+    <div class="grid">
+      <article class="card"><h3>Den otevřených dveří</h3><p>Ukázky oborů, praxe a studentské projekty.</p><div class="tag">akce</div></article>
+      <article class="card"><h3>Přijímačky 2026</h3><p>Termíny, podmínky přijetí, potřebné dokumenty.</p><div class="tag">info</div></article>
+      <article class="card"><h3>Praxe & projekty</h3><p>Simulace provozu + portfolio dovedností.</p><div class="tag">praxe</div></article>
+    </div>
+  </section>
+
+  <!-- JÍDELNA -->
+  <section class="section reveal" id="jidelna">
+    <h2>Školní jídelna</h2>
+    <p class="txt">
+      Jídelníček • alergeny • přihlášky/odhlášky stravy. Vaříme tak, aby to bylo rychlé, dobré a bez nudy.
+      Humor je v názvu — obsah je normální. 😄
+    </p>
+
+    <div class="note-card">
+      <b>Jak to funguje</b>
+      <span>Po–Pá • 10:30–14:00 • Alergeny u jídel • Vegetariánská volba denně • Pitný režim: voda/čaj</span>
+    </div>
+
+    <div class="menu">
+      <div class="menu-day">
+        <h3>Pondělí</h3>
+        <ul>
+          <li><b>Polévka:</b> „Kocouří“ polévka (bez kočky 😄) – vývar + nudle <span class="al">A: 1,3,9</span></li>
+          <li><b>Hlavní:</b> „Psí kebab“ (kuře v pita, extra omáčka) <span class="al">A: 1,7</span></li>
+          <li><b>Veggie:</b> Tofu stir-fry s rýží <span class="al">A: 6</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-day">
+        <h3>Úterý</h3>
+        <ul>
+          <li><b>Polévka:</b> Tom Kha (kokosová) <span class="al">A: 7</span></li>
+          <li><b>Hlavní:</b> Bún bò „rychlost blesku“ <span class="al">A: 1,9</span></li>
+          <li><b>Veggie:</b> Pho zeleninové <span class="al">A: 1,9</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-day">
+        <h3>Středa</h3>
+        <ul>
+          <li><b>Polévka:</b> Miso s tofu <span class="al">A: 6</span></li>
+          <li><b>Hlavní:</b> Smažená rýže „tržnice deluxe“ <span class="al">A: 3,6</span></li>
+          <li><b>Veggie:</b> Wok zelenina + jasmínová rýže <span class="al">A: 6</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-day">
+        <h3>Čtvrtek</h3>
+        <ul>
+          <li><b>Polévka:</b> Česneková „na přežití testu“ <span class="al">A: 1,7</span></li>
+          <li><b>Hlavní:</b> Kuřecí „Bánh mì vibe“ + salát <span class="al">A: 1,7</span></li>
+          <li><b>Veggie:</b> Falafel bowl „taky se počítá“ <span class="al">A: 1,6</span></li>
+        </ul>
+      </div>
+
+      <div class="menu-day">
+        <h3>Pátek</h3>
+        <ul>
+          <li><b>Polévka:</b> Ramen školní (ne z kelímku 😅) <span class="al">A: 1,3,6</span></li>
+          <li><b>Hlavní:</b> Křupavé kuře + rýže + sweet chilli <span class="al">A: 1,3</span></li>
+          <li><b>Veggie:</b> Jarní závitky + salát <span class="al">A: 1,6</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <b>Přihlášky / odhlášky</b>
+      <span>Přihlášení do 8:00 • Odhlášení do 7:30 • Platba hotově/převodem • Kontakt: jidelna@vecerka-skola.cz</span>
+    </div>
+  </section>
+
+  <!-- DOMOV -->
+  <section class="section alt reveal" id="domov">
+    <h2>Domovy mládeže</h2>
+    <p class="txt">
+      Bezpečné ubytování pro studenty mimo město. Klid na učení, prostor na oddych a pravidla, co dávají smysl.
+    </p>
+
+    <div class="grid">
+      <article class="card"><h3>Ubytování</h3><p>2–3 lůžkové pokoje, kuchyňka, prádelna, Wi-Fi.</p><div class="tag">komfort</div></article>
+      <article class="card"><h3>Studovna</h3><p>Tichá zóna na úkoly (i „last minute“ před písemkou).</p><div class="tag">škola</div></article>
+      <article class="card"><h3>Režim</h3><p>Klidový režim večer, dohled vychovatelů, férový řád.</p><div class="tag">řád</div></article>
+      <article class="card"><h3>Bezpečnost</h3><p>Evidence návštěv, noční klid, základní pravidla pro pohodu.</p><div class="tag">safe</div></article>
+      <article class="card"><h3>Vybavení</h3><p>Společenská místnost, lednice, mikrovlnka, sport věci.</p><div class="tag">zázemí</div></article>
+      <article class="card"><h3>Bonus</h3><p>Komunitní akce: film night, deskovky, čajovna.</p><div class="tag">life</div></article>
+    </div>
+
+    <div class="note-card">
+      <b>Kontakt na domov mládeže</b>
+      <span>Vychovatelna: dm@vecerka-skola.cz • Tel.: +420 777 000 000 • Příjezdy: Ne 17:00–20:00</span>
+    </div>
+  </section>
+
+  <!-- VEŘEJNOST -->
+  <section class="section reveal" id="verejnost">
+    <h2>Pro veřejnost</h2>
+    <p class="txt">
+      Spolupráce s firmami, kurzy a akce školy. Hledáme partnery na praxe, stáže a reálné projekty.
+    </p>
+
+    <div class="grid">
+      <article class="card"><h3>Partnerství</h3><p>Praxe pro studenty, mentoring, exkurze, nabídky brigád.</p><div class="tag">firmy</div></article>
+      <article class="card"><h3>Kurzy</h3><p>Barber basics, nail workshop, základy gastro, prodej v praxi.</p><div class="tag">kurzy</div></article>
+      <article class="card"><h3>Akce</h3><p>Den otevřených dveří, školní festival, charitativní trh.</p><div class="tag">akce</div></article>
+      <article class="card"><h3>Pro rodiče</h3><p>Informace o studiu, konzultace, třídní schůzky, poradna.</p><div class="tag">rodiče</div></article>
+      <article class="card"><h3>Pronájmy</h3><p>Pronájem učeben (po domluvě), školení, workshopy.</p><div class="tag">prostor</div></article>
+      <article class="card"><h3>Kontakt pro spolupráci</h3><p>spoluprace@vecerka-skola.cz • Odpovíme do 48h.</p><div class="tag">mail</div></article>
+    </div>
+  </section>
+
+ <section class="section alt reveal" id="kontakt">
+  <h2>Kontakt</h2>
+  <p class="txt">Napiš nám — zpráva se odešle přes EmailJS (bez serveru).</p>
+
+  <form class="form" id="contactForm">
+    <input type="hidden" name="time" id="timeField">
+
+    <input name="name" placeholder="Jméno" required>
+    <input name="email" type="email" placeholder="Váš email (pro odpověď)" required>
+    <textarea name="message" rows="4" placeholder="Zpráva" required></textarea>
+
+    <button class="btn primary" id="sendBtn" type="submit">
+      <span id="sendBtnText">Odeslat</span>
+      <span class="spinner" id="sendSpinner" aria-hidden="true"></span>
+    </button>
+
+    <p class="form-note" id="formNote" aria-live="polite"></p>
+  </form>
+</section>
+
+
+  <footer class="footer">
+    <span>© 2026 Večerka Střední škola</span>
+    <a href="#domu">Nahoru ↑</a>
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="script/script.js"></script>
 </body>
 </html>
