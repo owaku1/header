@@ -171,3 +171,7 @@ const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").mat
     }
   });
 })();
+document.getElementById("footerYear").textContent =
+
+  "© " + new Date().getFullYear() + " Večerka Střední škola";
+ 
